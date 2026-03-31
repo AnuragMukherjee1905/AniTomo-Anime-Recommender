@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AnimuSearch</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+  <!-- Scanline overlay -->
+  <div class="scanlines"></div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-logo">
+      <span class="logo-jp">アニメ</span>
+      <span class="logo-en">AniSearch</span>
+    </div>
+    <div class="nav-tagline">your retro anime oracle</div>
+  </nav>
+
+  <div class="app">
+
+    <!-- Hero -->
+    <header class="hero">
+      <div class="hero-noise"></div>
+      <div class="hero-content">
+        <h1 class="hero-title">
+          <span class="title-line1">FIND YOUR</span>
+          <span class="title-line2">NEXT ANIME</span>
+        </h1>
+        <p class="hero-sub">powered by machine learning &amp; otaku energy</p>
+        <div class="search-wrap">
+          <div class="search-box">
+            <span class="search-icon">⌕</span>
+            <input class="search-input" type="text" id="search-input"
+              placeholder="Search title, genre, studio…"/>
+            <button class="btn-search" id="search-btn">GO</button>
+          </div>
+        </div>
+      </div>
+      <div class="hero-deco">
+        <div class="deco-circle c1"></div>
+        <div class="deco-circle c2"></div>
+        <div class="deco-circle c3"></div>
+      </div>
+    </header>
+
+    <!-- Filters -->
+    <section class="filters-section">
+      <div class="filter-block">
+        <div class="filter-label">
+          <span class="label-bracket">[</span> GENRE <span class="label-bracket">]</span>
+        </div>
+        <div class="pills" id="genre-pills"></div>
+      </div>
+      <div class="filter-block" style="margin-top:1.25rem;">
+        <div class="filter-label">
+          <span class="label-bracket">[</span> MOOD <span class="label-bracket">]</span>
+        </div>
+        <div class="mood-grid" id="mood-grid"></div>
+      </div>
+      <button class="recommend-btn" id="rec-btn">
+        <span class="btn-inner">▶ GET RECOMMENDATIONS</span>
+      </button>
+    </section>
+
+    <!-- Divider -->
+    <div class="retro-divider">
+      <span>◈</span><span>◈</span><span>◈</span>
+    </div>
+
+    <!-- Cards -->
+    <section class="cards-section">
+      <div class="cards-header">
+        <span class="cards-title" id="cards-title">TRENDING THIS SEASON</span>
+        <span class="cards-count" id="cards-count"></span>
+      </div>
+      <div class="cards-grid" id="cards-grid"></div>
+    </section>
+
+  </div>
+
+  <!-- Detail Modal -->
+  <div class="modal-overlay" id="modal-overlay" onclick="closeModal()">
+    <div class="modal" onclick="event.stopPropagation()">
+      <button class="modal-close" onclick="closeModal()">✕ CLOSE</button>
+      <div class="modal-inner" id="modal-inner"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
