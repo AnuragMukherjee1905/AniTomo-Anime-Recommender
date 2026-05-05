@@ -171,6 +171,7 @@ def search(q: str = Query(..., min_length=1), limit: int = Query(20, ge=1, le=10
             "genres":   (row["genres"] or "").split("|"),
             "episodes": int(row.get("episodes") or 0),
             "year":     row.get("year"),
+            "image_url": row.get("image_url"),
         }
         for _, row in matches.iterrows()
     ]
@@ -191,6 +192,7 @@ def trending(limit: int = Query(50, ge=1, le=200)):
             "genres":   (row["genres"] or "").split("|"),
             "episodes": int(row.get("episodes") or 0),
             "year":     row.get("year"),
+            "image_url": row.get("image_url"),
         }
         for _, row in top.iterrows()
     ]
