@@ -1,4 +1,21 @@
-.env
-*.csv
-*.pkl
+# Python
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environment
+venv/
+.env/
+
+# Model + data
+model.pkl
+*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
