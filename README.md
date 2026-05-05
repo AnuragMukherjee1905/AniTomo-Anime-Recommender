@@ -1,4 +1,6 @@
-# 🎌 Anime Recommender System
+# 🎌 AniTomo
+
+AniTomo — Your anime friend that recommends what to watch next.
 
 A full-stack anime recommendation system that suggests shows based on your preferences using a mix of machine learning techniques and a dynamic web interface.
 
