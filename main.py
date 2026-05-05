@@ -62,7 +62,7 @@ async def lifespan(app: FastAPI):
     print("Shutting down.")
 
 
-app = FastAPI(title="Anime Recommender API", version="2.0.0", lifespan=lifespan)
+app = FastAPI(title="AniTomo API", version="2.0.0", lifespan=lifespan)
 
 app.add_middleware(
     CORSMiddleware,
