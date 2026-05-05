@@ -48,7 +48,8 @@ function renderCards() {
   const count = document.getElementById('cards-count');
   count.textContent = `${displayedAnime.length} result${displayedAnime.length !== 1 ? 's' : ''}`;
 
-  if (displayedAnime.length === 0) {
+  if (displayedAnime.length === 0) 
+  {
     grid.innerHTML = `
       <div class="empty-state">
         &gt; NO RESULTS FOUND_<br>
@@ -58,6 +59,7 @@ function renderCards() {
   }
 
   grid.innerHTML = displayedAnime.map(a => {
+    console.log(a);
     const genre      = Array.isArray(a.genres) ? a.genres[0] : (a.genre || '');
     const badgeClass = getBadgeClass(genre);
     const score      = a.score || '?';
