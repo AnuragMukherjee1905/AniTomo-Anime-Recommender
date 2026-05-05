@@ -84,7 +84,7 @@ class AnimeRecommender:
         """
         print("Fitting recommender …")
         self.anime_df  = anime_df.copy().reset_index(drop=True)
-        self.anime_index = {int(row["id"]): idx for idx, row in self.anime_df.iterrows()}
+        self.anime_index = {int(row["id"]): idx for idx, row in self.anime_df.iterrows()} #basically mapping id to row index
 
         self._fit_content_model()
 
@@ -104,7 +104,7 @@ class AnimeRecommender:
         print("  Building content model …")
         df = self.anime_df
 
-        synopses = df["synopsis"].fillna("").astype(str)
+        synopses = df["synopsis"].fillna("").astype(str) #data cleaning
         tfidf_mat = self._tfidf.fit_transform(synopses)
 
         # Parse genres — stored as pipe-separated string in CSV
@@ -233,6 +233,7 @@ class AnimeRecommender:
                 "episodes":    int(row.get("episodes") or 0),
                 "year":        row.get("year"),
                 "match_score": round(float(row["_match"]), 4),
+                "image_url": row.get("image_url"),   
             }
             for _, row in top.iterrows()
         ]
@@ -282,6 +283,7 @@ class AnimeRecommender:
                 "score":      round(float(row["score"]), 1),
                 "genres":     (row["genres"] or "").split("|"),
                 "similarity": round(float(score), 4),
+                "image_url": row.get("image_url"),
             })
         return results
 
