@@ -108,9 +108,7 @@ The backend exposes APIs like:
 ### 1. Download the project
 
 Click the **Code → Download ZIP** button on GitHub and extract it.
-```
 
----
 
 ### 2. Create virtual environment (recommended)
 
