@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AnimuSearch</title>
+  <title>AniTomo</title>
+
+  <!-- SEO -->
+  <meta name="description" content="AniTomo - Your anime friend that recommends what to watch next."/>
+
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
@@ -14,10 +18,10 @@
   <!-- Navbar -->
   <nav class="navbar">
     <div class="nav-logo">
-      <span class="logo-jp">アニメ</span>
-      <span class="logo-en">AniSearch</span>
+      <span class="logo-jp">アニ友</span>
+      <span class="logo-en">AniTomo</span>
     </div>
-    <div class="nav-tagline">your retro anime oracle</div>
+    <div class="nav-tagline">your anime friend 🎌</div>
   </nav>
 
   <div class="app">
@@ -27,19 +31,21 @@
       <div class="hero-noise"></div>
       <div class="hero-content">
         <h1 class="hero-title">
-          <span class="title-line1">FIND YOUR</span>
+          <span class="title-line1">DISCOVER YOUR</span>
           <span class="title-line2">NEXT ANIME</span>
         </h1>
-        <p class="hero-sub">powered by machine learning &amp; otaku energy</p>
+        <p class="hero-sub">powered by machine learning &amp; your anime buddy</p>
+
         <div class="search-wrap">
           <div class="search-box">
             <span class="search-icon">⌕</span>
             <input class="search-input" type="text" id="search-input"
-              placeholder="Search title, genre, studio…"/>
+              placeholder="Search anime, genre, or vibe…"/>
             <button class="btn-search" id="search-btn">GO</button>
           </div>
         </div>
       </div>
+
       <div class="hero-deco">
         <div class="deco-circle c1"></div>
         <div class="deco-circle c2"></div>
@@ -55,14 +61,16 @@
         </div>
         <div class="pills" id="genre-pills"></div>
       </div>
+
       <div class="filter-block" style="margin-top:1.25rem;">
         <div class="filter-label">
           <span class="label-bracket">[</span> MOOD <span class="label-bracket">]</span>
         </div>
         <div class="mood-grid" id="mood-grid"></div>
       </div>
+
       <button class="recommend-btn" id="rec-btn">
-        <span class="btn-inner">▶ GET RECOMMENDATIONS</span>
+        <span class="btn-inner">▶ ASK TOMO</span>
       </button>
     </section>
 
@@ -74,7 +82,7 @@
     <!-- Cards -->
     <section class="cards-section">
       <div class="cards-header">
-        <span class="cards-title" id="cards-title">TRENDING THIS SEASON</span>
+        <span class="cards-title" id="cards-title">TRENDING PICKS</span>
         <span class="cards-count" id="cards-count"></span>
       </div>
       <div class="cards-grid" id="cards-grid"></div>
