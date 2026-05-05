@@ -117,9 +117,6 @@ Click the **Code → Download ZIP** button on GitHub and extract it.
 ```bash
 py -3.11 -m venv venv
 venv\Scripts\activate
-```
-
----
 
 ### 3. Install dependencies
 
